@@ -7,19 +7,23 @@ body {
 
 .banner {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     background-color: #333;
     color: white;
-    padding: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner-content {
     text-align: center;
 }
 
 .banner .logo {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-bottom: 15px; /* Espacio entre el logo y el título */
 }
 
 .banner-text h1 {
@@ -36,7 +40,7 @@ body {
 .banner-text p {
     margin: 5px 0 0;
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .catalogo {
@@ -83,4 +87,12 @@ body {
 .producto p {
     color: #666;
     font-size: 0.9rem;
+}
+
+/* Estilo para el precio */
+.precio {
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    font-weight: bold;
+    color: red !important; /* Asegúrate de que el color rojo se aplique */
+    margin-top: 10px;
 }
