@@ -19,55 +19,79 @@
         </div>
     </header>
 
+    <!-- Botones de categorías -->
+    <nav class="categorias">
+        <button onclick="filtrarProductos('todo')">Todo</button>
+        <button onclick="filtrarProductos('collares')">Collares</button>
+        <button onclick="filtrarProductos('pulseras')">Pulseras</button>
+        <button onclick="filtrarProductos('anillos')">Anillos</button>
+    </nav>
+
     <!-- Catálogo de Productos -->
     <main class="catalogo">
-        <!-- Ejemplo de producto -->
-        <div class="producto">
-            <a href="imagen-grande.jpg" target="_blank">
-                <img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F8f82b7dba8098ffc4b7c76cafbae3a38.cdn.bubble.io%2Ff1723666092257x734654018391989600%2F1001046185.png?w=384&h=384&auto=compress&dpr=1&q=50&fit=max" alt="Producto 1">
+        <!-- Ejemplo de producto en categoría 'collares' -->
+        <div class="producto collares">
+            <a href="imagen-grande-collar.jpg" target="_blank">
+                <img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F8f82b7dba8098ffc4b7c76cafbae3a38.cdn.bubble.io%2Ff1723666092257x734654018391989600%2F1001046185.png?w=384&h=384&auto=compress&dpr=1&q=50&fit=max" alt="Collar 1">
             </a>
-            <h3 class="titulo-producto" onclick="enviarWhatsApp('Producto 1')">Producto 1</h3>
-            <p>Descripción breve del producto 1.</p>
-            <p class="precio">$29.99</p> <!-- Precio del producto -->
+            <h3 class="titulo-producto" onclick="enviarWhatsApp('Collar 1')">Collar 1</h3>
+            <p>Descripción breve del collar 1.</p>
+            <p class="precio">$29.99</p>
         </div>
-        
-        <div class="producto">
-            <a href="imagen-grande.jpg" target="_blank">
-                <img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F8f82b7dba8098ffc4b7c76cafbae3a38.cdn.bubble.io%2Ff1723666092257x734654018391989600%2F1001046185.png?w=384&h=384&auto=compress&dpr=1&q=50&fit=max" alt="Producto 2">
+
+        <!-- Ejemplo de producto en categoría 'pulseras' -->
+        <div class="producto pulseras">
+            <a href="imagen-grande-pulsera.jpg" target="_blank">
+                <img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F8f82b7dba8098ffc4b7c76cafbae3a38.cdn.bubble.io%2Ff1723666092257x734654018391989600%2F1001046185.png?w=384&h=384&auto=compress&dpr=1&q=50&fit=max" alt="Pulsera 1">
             </a>
-            <h3 class="titulo-producto" onclick="enviarWhatsApp('Producto 2')">Producto 2</h3>
-            <p>Descripción breve del producto 2.</p>
-            <p class="precio">$39.99</p> <!-- Precio del producto -->
+            <h3 class="titulo-producto" onclick="enviarWhatsApp('Pulsera 1')">Pulsera 1</h3>
+            <p>Descripción breve de la pulsera 1.</p>
+            <p class="precio">$39.99</p>
         </div>
-        
-        <div class="producto">
-            <a href="imagen-grande.jpg" target="_blank">
-                <img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F8f82b7dba8098ffc4b7c76cafbae3a38.cdn.bubble.io%2Ff1723666092257x734654018391989600%2F1001046185.png?w=384&h=384&auto=compress&dpr=1&q=50&fit=max" alt="Producto 3">
+
+        <!-- Ejemplo de producto en categoría 'anillos' -->
+        <div class="producto anillos">
+            <a href="imagen-grande-anillo.jpg" target="_blank">
+                <img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F8f82b7dba8098ffc4b7c76cafbae3a38.cdn.bubble.io%2Ff1723666092257x734654018391989600%2F1001046185.png?w=384&h=384&auto=compress&dpr=1&q=50&fit=max" alt="Anillo 1">
             </a>
-            <h3 class="titulo-producto" onclick="enviarWhatsApp('Producto 3')">Producto 3</h3>
-            <p>Descripción breve del producto 3.</p>
-            <p class="precio">$49.99</p> <!-- Precio del producto -->
+            <h3 class="titulo-producto" onclick="enviarWhatsApp('Anillo 1')">Anillo 1</h3>
+            <p>Descripción breve del anillo 1.</p>
+            <p class="precio">$49.99</p>
         </div>
-        
-        <div class="producto">
-            <a href="imagen-grande.jpg" target="_blank">
-                <img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F8f82b7dba8098ffc4b7c76cafbae3a38.cdn.bubble.io%2Ff1723666092257x734654018391989600%2F1001046185.png?w=384&h=384&auto=compress&dpr=1&q=50&fit=max" alt="Producto 4">
-            </a>
-            <h3 class="titulo-producto" onclick="enviarWhatsApp('Producto 4')">Producto 4</h3>
-            <p>Descripción breve del producto 4.</p>
-            <p class="precio">$59.99</p> <!-- Precio del producto -->
-        </div>
-        
+
         <!-- Repite los divs de "producto" para más productos -->
     </main>
 
     <script>
+        // Función para enviar mensaje de WhatsApp
         function enviarWhatsApp(producto) {
             const mensaje = `Me gustaría adquirir el "${producto}"`;
             const numeroWhatsApp = "3187400943"; // Reemplaza con tu número de WhatsApp
             const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
             window.open(url, '_blank');
         }
+
+        // Función para filtrar productos por categoría
+        function filtrarProductos(categoria) {
+            const productos = document.querySelectorAll('.producto');
+
+            productos.forEach(producto => {
+                if (categoria === 'todo') {
+                    producto.style.display = 'block';
+                } else {
+                    if (producto.classList.contains(categoria)) {
+                        producto.style.display = 'block';
+                    } else {
+                        producto.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Mostrar todos los productos al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            filtrarProductos('todo');
+        });
     </script>
 </body>
 </html>
