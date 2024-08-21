@@ -11,7 +11,7 @@ body {
     align-items: center;
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -20,10 +20,10 @@ body {
 }
 
 .banner .logo {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
 
 .banner-text h1 {
@@ -52,7 +52,7 @@ body {
 
 .categorias button {
     background-color: #000000;
-    color: rgb(255, 196, 0);
+    color: #ffffff;
     padding: 15px 20px;
     border: none;
     margin: 10px;
@@ -64,9 +64,10 @@ body {
 }
 
 .categorias button:hover {
-    background-color: #b35100;
+    background-color: #202020;
+    color: #f7d700;
 }
-
+ 
 /* Estilos para la disposición del catálogo */
 .catalogo {
     display: grid;
@@ -125,15 +126,15 @@ body {
 /* Media queries para dispositivos pequeños */
 @media (max-width: 768px) {
     .catalogo {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en dispositivos pequeños */
+        grid-template-columns: repeat(1, 1fr); /* Dos columnas en dispositivos pequeños */
     }
 
     .categorias {
-        flex-direction: column; /* Las categorías se apilan verticalmente en pantallas pequeñas */
+        flex-direction: row; /* Las categorías se apilan verticalmente en pantallas pequeñas */
     }
 
     .categorias button {
-        max-width: 100%; /* Los botones ocupan todo el ancho disponible en pantallas pequeñas */
+        max-width: 25%; /* Los botones ocupan todo el ancho disponible en pantallas pequeñas */
     }
 }
 
@@ -151,3 +152,19 @@ body {
         max-width: 150px; /* Los botones tienen un ancho máximo fijo en pantallas grandes */
     }
 }
+
+/* Estilos para las imágenes de productos */
+.producto img {
+    width: 100%; /* El ancho de la imagen ocupa el 100% del contenedor */
+    height: 300px; /* Ajusta la altura fija de la imagen */
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen y cubre el área del contenedor */
+    border-radius: 15px;
+    margin: 5px; /* Espaciado entre imágenes */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.producto img:hover {
+    transform: scale(1.05);
+}
+
