@@ -19,91 +19,59 @@
         </div>
     </header>
 
-    <div class="container">
-        <!-- Categorías -->
-        <div class="categorias">
-            <button onclick="mostrarCategoria('todo')">Todo</button>
-            <button onclick="mostrarCategoria('collares')">Collares</button>
-            <button onclick="mostrarCategoria('pulseras')">Pulseras</button>
-            <button onclick="mostrarCategoria('anillos')">Anillos</button>
-            <button onclick="mostrarCategoria('caballeros')">Caballeros</button> <!-- Nueva categoría -->
+    <!-- Categorías -->
+    <div class="categorias">
+        <button onclick="mostrarCategoria('todo')">Todo</button>
+        <button onclick="mostrarCategoria('collares')">Collares</button>
+        <button onclick="mostrarCategoria('pulseras')">Pulseras</button>
+        <button onclick="mostrarCategoria('anillos')">Anillos</button>
+        <button onclick="mostrarCategoria('caballeros')">Caballeros</button>
+    </div>
+
+    <!-- Catálogo de Productos -->
+    <main class="catalogo" id="catalogo">
+        <!-- Ejemplo de producto - Categoria Collares -->
+        <div class="producto" data-categoria="collares">
+            <a href="imagen.jpg" target="_blank">
+                <img src="imagen.jpg" alt="Collar 1">
+            </a>
+            <h3 class="titulo-producto" onclick="enviarWhatsApp('Collar 1')">Collar 1</h3>
+            <p>Descripción breve del collar 1.</p>
+            <p class="precio">$20.00</p>
         </div>
 
-        <!-- Catálogo de Productos -->
-        <main class="catalogo" id="catalogo">
-            <!-- Ejemplo de producto - Categoria Collares -->
-            <div class="producto" data-categoria="collares">
-                <a href="imagen-grande-collar.jpg" target="_blank">
-                    <img src="https://ejemplo.com/collar1.jpg" alt="Collar 1">
-                </a>
-                <h3 class="titulo-producto" onclick="enviarWhatsApp('Collar 1')">Collar 1</h3>
-                <p>Descripción breve del collar 1.</p>
-                <p class="precio">$20.00</p>
-            </div>
+        <!-- Ejemplo de producto - Categoria Pulseras -->
+        <div class="producto" data-categoria="pulseras">
+            <a href="imagen-grande-pulsera.jpg" target="_blank">
+                <img src="https://ejemplo.com/pulsera1.jpg" alt="Pulsera 1">
+            </a>
+            <h3 class="titulo-producto" onclick="enviarWhatsApp('Pulsera 1')">Pulsera 1</h3>
+            <p>Descripción breve de la pulsera 1.</p>
+            <p class="precio">$15.00</p>
+        </div>
 
-             <!-- Ejemplo de producto - Categoria Collares -->
-             <div class="producto" data-categoria="collares">
-                <a href="imagen-grande-collar.jpg" target="_blank">
-                    <img src="https://ejemplo.com/collar1.jpg" alt="Collar 1">
-                </a>
-                <h3 class="titulo-producto" onclick="enviarWhatsApp('Collar 1')">Collar 1</h3>
-                <p>Descripción breve del collar 1.</p>
-                <p class="precio">$20.00</p>
-            </div>
+        <!-- Ejemplo de producto - Categoria Anillos -->
+        <div class="producto" data-categoria="anillos">
+            <a href="imagen-grande-anillo.jpg" target="_blank">
+                <img src="https://ejemplo.com/anillo1.jpg" alt="Anillo 1">
+            </a>
+            <h3 class="titulo-producto" onclick="enviarWhatsApp('Anillo 1')">Anillo 1</h3>
+            <p>Descripción breve del anillo 1.</p>
+            <p class="precio">$25.00</p>
+        </div>
 
-             <!-- Ejemplo de producto - Categoria Collares -->
-             <div class="producto" data-categoria="collares">
-                <a href="imagen-grande-collar.jpg" target="_blank">
-                    <img src="https://ejemplo.com/collar1.jpg" alt="Collar 1">
-                </a>
-                <h3 class="titulo-producto" onclick="enviarWhatsApp('Collar 1')">Collar 1</h3>
-                <p>Descripción breve del collar 1.</p>
-                <p class="precio">$20.00</p>
-            </div>
+        <!-- Ejemplo de producto - Categoria Caballeros -->
+        <div class="producto" data-categoria="caballeros">
+            <a href="imagen-grande-caballeros.jpg" target="_blank">
+                <img src="https://ejemplo.com/caballeros1.jpg" alt="Caballeros 1">
+            </a>
+            <h3 class="titulo-producto" onclick="enviarWhatsApp('Caballeros 1')">Caballeros 1</h3>
+            <p>Descripción breve del producto para caballeros 1.</p>
+            <p class="precio">$30.00</p>
+        </div>
 
-             <!-- Ejemplo de producto - Categoria Collares -->
-             <div class="producto" data-categoria="collares">
-                <a href="imagen-grande-collar.jpg" target="_blank">
-                    <img src="https://ejemplo.com/collar1.jpg" alt="Collar 1">
-                </a>
-                <h3 class="titulo-producto" onclick="enviarWhatsApp('Collar 1')">Collar 1</h3>
-                <p>Descripción breve del collar 1.</p>
-                <p class="precio">$20.00</p>
-            </div>
-
-            <!-- Ejemplo de producto - Categoria Pulseras -->
-            <div class="producto" data-categoria="pulseras">
-                <a href="imagen-grande-pulsera.jpg" target="_blank">
-                    <img src="https://ejemplo.com/pulsera1.jpg" alt="Pulsera 1">
-                </a>
-                <h3 class="titulo-producto" onclick="enviarWhatsApp('Pulsera 1')">Pulsera 1</h3>
-                <p>Descripción breve de la pulsera 1.</p>
-                <p class="precio">$15.00</p>
-            </div>
-
-            <!-- Ejemplo de producto - Categoria Anillos -->
-            <div class="producto" data-categoria="anillos">
-                <a href="imagen-grande-anillo.jpg" target="_blank">
-                    <img src="https://ejemplo.com/anillo1.jpg" alt="Anillo 1">
-                </a>
-                <h3 class="titulo-producto" onclick="enviarWhatsApp('Anillo 1')">Anillo 1</h3>
-                <p>Descripción breve del anillo 1.</p>
-                <p class="precio">$25.00</p>
-            </div>
-
-            <!-- Ejemplo de producto - Categoria Caballeros -->
-            <div class="producto" data-categoria="caballeros">
-                <a href="imagen-grande-caballeros.jpg" target="_blank">
-                    <img src="https://ejemplo.com/caballeros1.jpg" alt="Caballeros 1">
-                </a>
-                <h3 class="titulo-producto" onclick="enviarWhatsApp('Caballeros 1')">Caballeros 1</h3>
-                <p>Descripción breve del producto para caballeros 1.</p>
-                <p class="precio">$30.00</p>
-            </div>
-
-            <!-- Repite los divs de "producto" para más productos -->
-        </main>
-    </div>
+        <!-- Repite los divs de "producto" para más productos -->
+    </main>
 
     <script>
         function enviarWhatsApp(producto) {
