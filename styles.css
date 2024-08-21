@@ -53,18 +53,18 @@ body {
 .categorias button {
     background-color: #000000;
     color: rgb(255, 196, 0);
-    padding: 10px 20px;
+    padding: 15px 20px;
     border: none;
     margin: 10px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
     flex: 1; /* Permite que los botones crezcan para llenar el espacio disponible */
-    max-width: 150px; /* Limita el ancho máximo de los botones */
+    max-width: 200px; /* Limita el ancho máximo de los botones */
 }
 
 .categorias button:hover {
-    background-color: #0056b3;
+    background-color: #b35100;
 }
 
 /* Estilos para la disposición del catálogo */
@@ -140,7 +140,7 @@ body {
 /* Media queries para pantallas grandes */
 @media (min-width: 769px) {
     .catalogo {
-        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en pantallas grandes */
+        grid-template-columns: repeat(3, 1fr); /* Cuatro columnas en pantallas grandes */
     }
 
     .categorias {
